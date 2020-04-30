@@ -23,7 +23,7 @@ public class AuditDemo {
         params.put("app_id", APP_ID);
         params.put("timestamp", String.valueOf(System.currentTimeMillis()));
         params.put("unique_id", UUID.randomUUID().toString());
-        params.put("data", "https://audit-testapi.oss-cn-beijing.aliyuncs.com/76f73d4773d3223833894bfd91c2871b.mp4");
+        params.put("data", "请输入检测内容");
         String serverSignature = SignUtil.genSignature(APP_SECRET, params);
         params.put("signature", serverSignature);
         String str = OkHttpUtil.post(API_URL, params);
